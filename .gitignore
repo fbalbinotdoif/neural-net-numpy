@@ -1,7 +1,18 @@
+# Virtual environment
 venv/
+
+# Python cache
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
 *.egg-info/
 dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor config
+.vscode/
 .DS_Store
+
+# Scratch / throwaway test files
+scratch.py

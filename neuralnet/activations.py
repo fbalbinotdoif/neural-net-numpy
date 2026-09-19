@@ -10,11 +10,11 @@ def sigmoid(z):
     return 1 / (1 + np.e ** -z)
 
 def sigmoid_derivative(z):
-    "Derivate of Sigmoid expressed via sigmoid(z) itself"
+    "Derivative of Sigmoid expressed via sigmoid(z) itself"
     return sigmoid(z) * (1 - sigmoid(z))
 
 def relu(z):
-    "ReLu: max(0,z), applied element-wise"
+    "ReLU: max(0,z), applied element-wise"
     return np.maximum(0, z)
 
 def relu_derivative(z):
@@ -22,7 +22,7 @@ def relu_derivative(z):
     return (z > 0).astype(float)
 
 def softmax(x):
-    "Softmax over x, numerically stable (substructure max before exponentiating)"
+    "Softmax over x, numerically stable (subtrac max before exponentiating)"
     shifted = x - np.max(x)
     exp = np.exp(shifted)
     return exp / np.sum(exp)
